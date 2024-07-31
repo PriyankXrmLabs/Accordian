@@ -90,7 +90,7 @@ export default class Accordian extends React.Component<IAccordianProps, IAccordi
 
         
           
-        {mode === DisplayMode.Read && (<Acc list={this.props.list} context={this.props.context}></Acc>)}
+        {true && (<Acc list={this.props.list} context={this.props.context}></Acc>)}
       </div>
     );
   }
