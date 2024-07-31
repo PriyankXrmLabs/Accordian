@@ -173,7 +173,7 @@ export default class AccordianWebPart extends BaseClientSideWebPart<IAccordianWe
         // Create the list since it does not exist
         await sp.web.lists.add(listName, 'List created by SPFx WebPart', 100); // 100 is the default ListTemplateType
         const createdList = sp.web.lists.getByTitle(listName);
-        await createdList.fields.addText('Description');
+        await createdList.fields.addMultilineText('Description',{ RichText: false});
         alert(`List "${listName}" created successfully.`);
       } else {
         alert(`List "${listName}" already exists.`);
